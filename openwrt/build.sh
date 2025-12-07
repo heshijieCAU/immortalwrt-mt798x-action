@@ -81,6 +81,10 @@ case "$platform" in
         echo -e "${GREEN_COLOR}Model: CMCC A10 (U-Boot mod)${RES}"
         model="cmcc-a10"
         ;;
+    umi-uax3000e)
+        echo -e "${GREEN_COLOR}Model: UMI-UAX3000E${RES}"
+        model="uax3000e"
+        ;;        
     h3c-magic-nx30-pro)
         echo -e "${GREEN_COLOR}Model: H3C Magic NX30 Pro${RES}"
         model="nx30-pro"
@@ -115,11 +119,11 @@ case "$platform" in
         ;;
     xiaomi-redmi-router-ax6000)
         echo -e "${GREEN_COLOR}Model: Xiaomi-Redmi-Router-AX6000${RES}"
-        model="xiaomi-redmi-router-ax6000"
+        model="redmi-ax6000"
         ;;
     xiaomi-redmi-router-ax6000-512rom)
         echo -e "${GREEN_COLOR}Model: Xiaomi-Redmi-Router-AX6000 (512MB ROM)${RES}"
-        model="xiaomi-redmi-router-ax6000-512rom"
+        model="redmi-ax6000-512rom"
         ;;        
     jdcloud-re-cp-03)
         echo -e "${GREEN_COLOR}Model: JDCloud RE-CP-03${RES}"
@@ -212,6 +216,8 @@ if [ "$platform" = "cetron-ct3003-ubootmod" ]; then
     curl -s $mirror/openwrt/24-config-musl-ct3003 > .config
 elif [ "$platform" = "cmcc-a10-ubootmod" ]; then
     curl -s $mirror/openwrt/24-config-musl-a10 > .config
+elif [ "$platform" = "umi-uax3000e" ]; then
+    curl -s $mirror/openwrt/24-config-musl-uax3000e > .config    
 elif [ "$platform" = "h3c-magic-nx30-pro" ]; then
     curl -s $mirror/openwrt/24-config-musl-nx30-pro > .config
 elif [ "$platform" = "imou-lc-hx3001" ]; then
@@ -238,7 +244,7 @@ fi
 
 # config-common
 case "$platform" in
-    cetron-ct3003-ubootmod|cmcc-a10-ubootmod|h3c-magic-nx30-pro|imou-lc-hx3001|nokia-ea0326gmp|qihoo-360t7|newland-nl-wr8103)
+    cetron-ct3003|cmcc-a10|umi-uax3000e|h3c-magic-nx30-pro|imou-lc-hx3001|nokia-ea0326gmp|qihoo-360t7|newland-nl-wr8103)
         curl -s "$mirror/openwrt/24-config-ax3000-common" >> .config
         ;;
     clx-s20p|jdcloud-re-cp-03|xiaomi-redmi-router-ax6000|xiaomi-redmi-router-ax6000-512rom)
