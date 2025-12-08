@@ -81,6 +81,10 @@ case "$platform" in
         echo -e "${GREEN_COLOR}Model: CMCC A10 (U-Boot mod)${RES}"
         model="cmcc-a10"
         ;;
+    cmcc-rax3000m-emmc)
+        echo -e "${GREEN_COLOR}Model: CMCC RAX3000M EMMC${RES}"
+        model="cmcc-rax3000m-emmc"
+        ;;        
     umi-uax3000e)
         echo -e "${GREEN_COLOR}Model: UMI-UAX3000E${RES}"
         model="uax3000e"
@@ -105,6 +109,10 @@ case "$platform" in
         echo -e "${GREEN_COLOR}Model: 360 T7${RES}"
         model="360t7"
         ;;
+    xiaomi-mi-router-ax3000t)
+        echo -e "${GREEN_COLOR}Model: Xiaomi-Mi-Router-AX3000T${RES}"
+        model="mi-ax300t"
+        ;;        
     newland-nl-wr8103)
         echo -e "${GREEN_COLOR}Model: Newland-NL-WR8103${RES}"
         model="nl-wr8103"
@@ -230,6 +238,9 @@ case "$platform" in
     cmcc-a10)
         curl -s $mirror/openwrt/24-config-musl-a10 > .config
         ;;
+    cmcc-rax3000m-emmc)
+        curl -s $mirror/openwrt/24-config-musl-rax3000m-emmc > .config
+        ;;        
     umi-uax3000e)
         curl -s $mirror/openwrt/24-config-musl-uax3000e > .config
         ;;
@@ -251,6 +262,9 @@ case "$platform" in
     newland-nl-wr8103)
         curl -s $mirror/openwrt/24-config-musl-nl-wr8103 > .config
         ;;
+    xiaomi-mi-router-ax3000t)
+        curl -s $mirror/openwrt/24-config-musl-xiaomi-ax3000t > .config
+        ;;        
     clx-s20p)
         curl -s $mirror/openwrt/24-config-musl-s20p > .config
         ;;
@@ -273,7 +287,7 @@ esac
 
 # config-common
 case "$platform" in
-    cetron-ct3003|cmcc-a10|umi-uax3000e|h3c-magic-nx30-pro|imou-lc-hx3001|nokia-ea0326gmp|philips-hy3000|qihoo-360t7|newland-nl-wr8103)
+    cetron-ct3003|cmcc-a10|cmcc-rax3000m-emmc|umi-uax3000e|h3c-magic-nx30-pro|imou-lc-hx3001|nokia-ea0326gmp|philips-hy3000|qihoo-360t7|newland-nl-wr8103|xiaomi-mi-router-ax3000t)
         curl -s "$mirror/openwrt/24-config-ax3000-common" >> .config
         ;;
     jdcloud-re-cp-03|xiaomi-redmi-router-ax6000|xiaomi-redmi-router-ax6000-512rom)
