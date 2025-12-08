@@ -57,8 +57,6 @@ jobs:
     - name: Checkout
       continue-on-error: true
       uses: actions/checkout@main
-      with:
-        path: immortalwrt-mt798x-action
 
     - name: Setup variables
       run: |
