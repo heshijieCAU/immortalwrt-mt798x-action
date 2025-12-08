@@ -1,5 +1,5 @@
 <div align="center">
-<img width="768" src="https://cdn.jsdelivr.net/gh/haiibo/OpenWrt/images/openwrt.png"/>
+<img width="768" src="https://cdn.jsdelivr.net/gh/OPPEN321/immortalwrt-mt798x-action/images/zerowrt.png"/>
 <h1> Mediatek — 多设备固件云编译</h1>
 
 <img src="https://img.shields.io/github/downloads/OPPEN321/immortalwrt-mt798x-action/total.svg?style=for-the-badge&color=32C955"/>
