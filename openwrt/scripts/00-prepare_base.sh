@@ -9,6 +9,9 @@ sed -i "s/10.0.0.1/$LAN/g" package/base-files/files/bin/config_generate
 # default WIFI NAME
 sed -i "s/ZeroWrt/$WIFI_NAME/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 
+# default WIFI PASSWORD
+sed -i "s/1234567890/$WIFI_PASSWORD/g" package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+
 # default password
 if [ -n "$ROOT_PASSWORD" ]; then
     # sha256 encryption
