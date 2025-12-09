@@ -222,7 +222,10 @@ ENABLE_SAMBA4=y
 | [Ophub](https://github.com/ophub) | [SuLingGG](https://github.com/SuLingGG) | [QiuSimons](https://github.com/QiuSimons) | [IvanSolis1989](https://github.com/IvanSolis1989) |
 | <img width="100" src="https://avatars.githubusercontent.com/u/68696949"/> | <img width="100" src="https://avatars.githubusercontent.com/u/22287562"/> | <img width="100" src="https://avatars.githubusercontent.com/u/45143996"/> | <img width="100" src="https://avatars.githubusercontent.com/u/44228691"/> |
 
-
+## ⭐ 支持项目
+**如果您喜欢这个项目，请在 GitHub 上点个 Star 支持一下！**
 <a href="#readme">
+[![Stargazers over time](https://starchart.cc/OPPEN321/immortalwrt-mt798x-action.svg?variant=adaptive)](https://starchart.cc/OPPEN321/immortalwrt-mt798x-action)
+
 <img src="https://img.shields.io/badge/-返回顶部-FFFFFF.svg" title="返回顶部" align="right"/>
 </a>
