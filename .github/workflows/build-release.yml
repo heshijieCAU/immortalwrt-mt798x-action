@@ -12,6 +12,8 @@ on:
           - 'cetron-ct3003'
           - 'cmcc-a10'
           - 'cmcc-rax3000m-emmc'
+          - 'cmcc-rax3000m-nand'
+          - 'cmcc-rax3000me-nand'
           - 'umi-uax3000e'          
           - 'h3c-magic-nx30-pro'
           - 'imou-lc-hx3001'
@@ -27,7 +29,7 @@ on:
           - 'xiaomi-redmi-router-ax6000-512rom'
           - 'jdcloud-re-cp-03'
           - 'all-mt7981-devices'
-          - 'all-mt7981-devices'
+          - 'all-mt7986-devices'
           - 'all-high-power-devices'
       lan_addr:
         description: '🌐 设置默认 LAN IP 地址'
@@ -136,11 +138,11 @@ jobs:
       run: |
         mkdir -p rom
         case "${{ github.event.inputs.device }}" in
-          cetron-ct3003|cmcc-a10|cmcc-rax3000m-emmc|h3c-magic-nx30-pro|imou-lc-hx3001|\
-          nokia-ea0326gmp|philips-hy3000|qihoo-360t7|newland-nl-wr8103|umi-uax3000e|\
-          xiaomi-mi-router-ax3000t|clx-s20p|netcore-n60-pro|netcore-n60-pro-512rom|\
-          xiaomi-redmi-router-ax6000|xiaomi-redmi-router-ax6000-512rom|jdcloud-re-cp-03|\
-          all-mt7981-devices|all-mt7986-devices|all-high-power-devices)
+          cetron-ct3003|cmcc-a10|cmcc-rax3000m-emmc|cmcc-rax3000m-nand|cmcc-rax3000me-nand|\
+          h3c-magic-nx30-pro|imou-lc-hx3001|nokia-ea0326gmp|philips-hy3000|qihoo-360t7|\
+          newland-nl-wr8103|umi-uax3000e|xiaomi-mi-router-ax3000t|clx-s20p|netcore-n60-pro|\
+          netcore-n60-pro-512rom|xiaomi-redmi-router-ax6000|xiaomi-redmi-router-ax6000-512rom|\
+          jdcloud-re-cp-03|all-mt7981-devices|all-mt7986-devices|all-high-power-devices)
               cp -a openwrt/bin/targets/mediatek/*/*-sysupgrade.bin rom/
               ;;
         esac
